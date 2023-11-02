@@ -9,11 +9,6 @@ class Node<T> {
 }
 
 class Source {
-  public static int sumList(Node<Integer> head) {
-    // todo
-    return;
-  }
-
   public static void main(String[] args) {
     Node<Integer> a = new Node<>(2);
     Node<Integer> b = new Node<>(8);
@@ -30,5 +25,15 @@ class Source {
     
     System.out.println("Sum of my list: ");
     System.out.println(Source.sumList(a));
+  }
+
+  public static int sumList(Node<Integer> head) {
+    // todo
+    int sum = 0; 
+    while(head!=null){
+      sum+=head.val;
+      head=head.next; 
+    }
+    return sum;
   }
 }
